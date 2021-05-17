@@ -1,0 +1,152 @@
+/* Write your CSS in here */
+
+/** DO NOT REMOVE THESE OR YOUR JS WON'T WORK **/
+.modal-screen,
+.modal-wrapper {
+  display: none;
+}
+
+.modal-open .modal-screen,
+.modal-open .modal-wrapper {
+  display: flex;
+}
+
+:root {
+  --body-color: #ffffff;
+  --left-side-color: #d8d8d8;
+  --left-side-border-color: #979797;
+  --center-image-border-color: #7d2424;
+  --sign-in-color: #690202;
+  --sing-in-screen-background-color: rgba(0, 0, 0, 0.85);
+  --modal-background-color: #d8d8d8;
+  --welcome-text-color: #0e1c3a;
+  --modal-border-color: #979797;
+  --textbox-shadow-color: rgba(0, 0, 0, 0.5);
+  --login-background-color: #26283c;
+  --login-text-color: #d1d1d1;
+  --placeholder-text-color: #999999;
+}
+
+html {
+  font-size: 62.5%;
+  width: 1440px;
+}
+
+body {
+  background-color: var(--body-color);
+  z-index: -3;
+}
+
+.left-cover {
+  background-color: var(--left-side-color);
+  position: absolute;
+  width: 50vw;
+  height: 100%;
+  border: 1px solid var(--left-side-border-color);
+  z-index: -2;
+}
+
+.center-image {
+  background: url(../images/jeremy-ricketts-h4zs8fbybq4-unsplash.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 8px solid var(--center-image-border-color);
+  height: 477px;
+  width: 477px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.js-sign-in {
+  font-size: 3rem;
+  color: var(--sign-in-color);
+  border: none;
+  background: none;
+  z-index: 0;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  z-index: 0;
+}
+
+.js-modal-screen {
+  background-color: var(--sing-in-screen-background-color);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.modal-wrapper {
+  background-color: var(--modal-background-color);
+  border: 1px solid var(--modal-border-color);
+  font-family: Helvetica;
+  width: 633px;
+  height: 444px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.log-in-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.welcome {
+  color: var(--welcome-text-color);
+  font-size: 3.6rem;
+  margin-top: 66px;
+  margin-bottom: 56px;
+}
+
+.textbox {
+  font-family: Helvetica;
+  font-size: 2.2rem;
+  width: 370px;
+  height: 57px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 1px 2px var(--textbox-shadow-color);
+  padding-left: 11px;
+  margin-bottom: 27px;
+}
+
+.textbox:nth-of-type(2) {
+  margin-bottom: 41px;
+}
+
+.log-in {
+  font-family: Helvetica;
+  font-size: 22px;
+  text-transform: uppercase;
+  width: 166px;
+  height: 57px;
+  background-color: var(--login-background-color);
+  color: var(--login-text-color);
+  border-radius: 2px;
+  border: none;
+  margin-left: auto;
+  margin-bottom: 40px;
+  margin-right: auto;
+  text-align: center;
+}
+
+input::placeholder {
+  font-family: Helvetica;
+  font-size: 2.2rem;
+  color: var(--placeholder-text-color);
+}
